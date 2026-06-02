@@ -1,223 +1,348 @@
-<!doctype html>
-<html lang="en" class="dark">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <!-- Enable class-based dark mode -->
-    <!-- <script>
-    tailwind.config = {
-      darkMode: 'class'
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Anand Potukuchi | Backend Systems Engineer</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <style>
+    :root { color-scheme: light; }
+    html { scroll-behavior: smooth; }
+    body { font-family: Inter, sans-serif; background: #fbfbf8; color: #0f172a; }
+    .mono { font-family: "IBM Plex Mono", monospace; }
+    .paper {
+      background:
+        linear-gradient(rgba(15, 23, 42, 0.025) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(15, 23, 42, 0.025) 1px, transparent 1px),
+        #fbfbf8;
+      background-size: 36px 36px;
     }
-  </script> -->
-    <script src="https://cdn.tailwindcss.com"></script>
+    .hairline { box-shadow: inset 0 0 0 1px rgba(15, 23, 42, 0.08); }
+    .section-rule { border-top: 1px solid rgba(15, 23, 42, 0.10); }
+    .soft-rule { border-color: rgba(15, 23, 42, 0.08); }
+  </style>
+</head>
+<body class="paper antialiased">
+  <!-- Top navigation -->
+  <header class="sticky top-0 z-50 bg-[#fbfbf8]/88 backdrop-blur border-b border-slate-200/70">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="h-20 flex items-center justify-between gap-6">
+        <a href="#top" class="flex items-center gap-3">
+          <div class="w-9 h-9 rounded-full bg-slate-900 text-white flex items-center justify-center text-sm font-bold">A</div>
+          <div class="leading-tight">
+            <div class="text-sm font-semibold tracking-[0.22em] uppercase">Anand Potukuchi</div>
+            <div class="text-[11px] text-slate-500 mono">Backend Systems Engineer</div>
+          </div>
+        </a>
 
-    <title>Anand Potukuchi's Portfolio</title>
-  </head>
+        <nav class="hidden lg:flex items-center gap-8 text-sm text-slate-500">
+          <a href="#platforms" class="hover:text-slate-900 transition-colors">Platforms</a>
+          <a href="#systems" class="hover:text-slate-900 transition-colors">Systems</a>
+          <a href="#approach" class="hover:text-slate-900 transition-colors">Approach</a>
+          <a href="#technology" class="hover:text-slate-900 transition-colors">Technology</a>
+          <a href="#contact" class="hover:text-slate-900 transition-colors">Contact</a>
+        </nav>
 
-  <body
-    class="bg-white text-gray-900 dark:bg-gray-950 dark:text-gray-200 font-sans transition-colors duration-300"
-  >
-    <div class="max-w-6xl mx-auto px-6 py-10">
-      <!-- Header -->
-      <header class="mb-10 flex justify-between items-start">
-        <div>
-          <h1 class="text-3xl font-bold">Anand Potukuchi</h1>
-        </div>
-
-        <!-- <button id="themeToggle"
-        class="px-3 py-1 text-sm border border-gray-300 dark:border-gray-700 rounded">
-        🌙 / ☀️
-      </button> -->
-      </header>
-
-      <!-- About -->
-      <section class="mb-10">
-        <h2 class="text-xl font-semibold mb-3">About</h2>
-        <p class="text-gray-600 dark:text-gray-400 leading-relaxed">
-          Full-stack developer transitioning into data analysis. Experienced in
-          building scalable web applications using React, Node.js, and
-          TypeScript, with a growing focus on extracting insights from data.
-          Strong in problem-solving, system design, and turning complex datasets
-          into actionable outcomes.
-        </p>
-      </section>
-
-      <!-- Skills -->
-      <section class="mb-10">
-        <h2 class="text-xl font-semibold mb-3">Skills</h2>
-        <div class="flex flex-wrap gap-2">
-          <span class="px-3 py-1 bg-gray-200 dark:bg-gray-800 rounded"
-            >Data Analysis</span
-          >
-          <span class="px-3 py-1 bg-gray-200 dark:bg-gray-800 rounded"
-            >Excel</span
-          >
-          <span class="px-3 py-1 bg-gray-200 dark:bg-gray-800 rounded"
-            >Power BI</span
-          >
-          <span class="px-3 py-1 bg-gray-200 dark:bg-gray-800 rounded"
-            >Tableau</span
-          >
-          <span class="px-3 py-1 bg-gray-200 dark:bg-gray-800 rounded"
-            >Python</span
-          >
-          <span class="px-3 py-1 bg-gray-200 dark:bg-gray-800 rounded"
-            >SQL</span
-          >
-          <span class="px-3 py-1 bg-gray-200 dark:bg-gray-800 rounded"
-            >React</span
-          >
-          <span class="px-3 py-1 bg-gray-200 dark:bg-gray-800 rounded"
-            >Node.js</span
-          >
-          <span class="px-3 py-1 bg-gray-200 dark:bg-gray-800 rounded"
-            >TypeScript</span
-          >
-        </div>
-      </section>
-
-      <!-- Projects -->
-      <section class="mb-10">
-        <h2 class="text-xl font-semibold mb-4">Projects</h2>
-
-        <div
-          class="overflow-x-auto border border-gray-300 dark:border-gray-800 rounded-xl"
-        >
-          <table class="w-full text-sm">
-            <thead
-              class="bg-gray-100 dark:bg-gray-900 text-gray-600 dark:text-gray-400"
-            >
-              <tr>
-                <th class="text-left px-4 py-3">Project</th>
-                <th class="text-left px-4 py-3">Description</th>
-                <th class="text-left px-4 py-3">Tag</th>
-                <th class="text-left px-4 py-3">Last Updated</th>
-                <th class="text-left px-4 py-3">Visibility</th>
-              </tr>
-            </thead>
-
-            <tbody class="divide-y divide-gray-200 dark:divide-gray-800">
-              <tr class="hover:bg-gray-100 dark:hover:bg-gray-900">
-                <td class="px-4 py-3 font-medium">
-                  university_admissions_funnel_analysis
-                </td>
-                <td class="px-4 py-3 text-gray-500 dark:text-gray-400">
-                  Admissions funnel analysis
-                </td>
-                <td class="px-4 py-3">Data</td>
-                <td class="px-4 py-3">Feb 14, 2026</td>
-                <td class="px-4 py-3 text-green-500">Public</td>
-              </tr>
-
-              <tr class="hover:bg-gray-100 dark:hover:bg-gray-900">
-                <td class="px-4 py-3 font-medium">
-                  indian_auto_market_analysis
-                </td>
-                <td class="px-4 py-3 text-gray-500 dark:text-gray-400">
-                  Auto market study
-                </td>
-                <td class="px-4 py-3">Data</td>
-                <td class="px-4 py-3">Feb 12, 2026</td>
-                <td class="px-4 py-3 text-green-500">Public</td>
-              </tr>
-
-              <tr class="hover:bg-gray-100 dark:hover:bg-gray-900">
-                <td class="px-4 py-3 font-medium">
-                  analysing_it_assets_workforce
-                </td>
-                <td class="px-4 py-3 text-gray-500 dark:text-gray-400">
-                  IT asset insights
-                </td>
-                <td class="px-4 py-3">Data</td>
-                <td class="px-4 py-3">Feb 10, 2026</td>
-                <td class="px-4 py-3 text-green-500">Public</td>
-              </tr>
-
-              <tr class="hover:bg-gray-100 dark:hover:bg-gray-900">
-                <td class="px-4 py-3 font-medium">
-                  analysing_customer_behavior
-                </td>
-                <td class="px-4 py-3 text-gray-500 dark:text-gray-400">
-                  Retail behavior
-                </td>
-                <td class="px-4 py-3">Data</td>
-                <td class="px-4 py-3">Feb 8, 2026</td>
-                <td class="px-4 py-3 text-green-500">Public</td>
-              </tr>
-
-              <tr class="hover:bg-gray-100 dark:hover:bg-gray-900">
-                <td class="px-4 py-3 font-medium">nido</td>
-                <td class="px-4 py-3 text-gray-500 dark:text-gray-400">
-                  A Node.js CLI boilerplate 
-                </td>
-                <td class="px-4 py-3">CLI</td>
-                <td class="px-4 py-3">Aug 13, 2024</td>
-                <td class="px-4 py-3 text-green-500">Public</td>
-              </tr>
-
-              <tr class="hover:bg-gray-100 dark:hover:bg-gray-900">
-                <td class="px-4 py-3 font-medium">seo_analyzer</td>
-                <td class="px-4 py-3 text-gray-500 dark:text-gray-400">
-                  SEO analyzer tool
-                </td>
-                <td class="px-4 py-3">Backend</td>
-                <td class="px-4 py-3">Dec 21, 2023</td>
-                <td class="px-4 py-3 text-green-500">Public</td>
-              </tr>
-
-
-              <tr class="hover:bg-gray-100 dark:hover:bg-gray-900">
-                <td class="px-4 py-3 font-medium">express-sequelize-mvc-starter</td>
-                <td class="px-4 py-3 text-gray-500 dark:text-gray-400">
-                  Express Sequelize MVC Starter
-                </td>
-                <td class="px-4 py-3">Backend</td>
-                <td class="px-4 py-3"> Sep 23, 2023</td>
-                <td class="px-4 py-3 text-green-500">Public</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </section>
-
-      <!-- Footer -->
-      <footer
-        class="text-sm text-gray-500 border-t border-gray-300 dark:border-gray-800 pt-6"
-      >
-        Built with
-        <a
-          href="https://tailwindcss.com/"
-          target="_blank"
-          class="text-blue-500 hover:underline"
-          >Tailwind CSS</a
-        >.
-      </footer>
+        <a href="/resume.pdf" download class="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-slate-900 text-white font-semibold hover:bg-slate-800 transition-colors">
+          <i class="fa-solid fa-file-arrow-down"></i>
+          Resume
+        </a>
+      </div>
     </div>
+  </header>
 
-    <!-- Toggle Script 
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      const toggle = document.getElementById('themeToggle');
+  <main id="top" class="paper">
+    <!-- Hero -->
+    <section class="max-w-7xl mx-auto px-6 py-12 md:py-16">
+      <div class="grid lg:grid-cols-[1.18fr_.82fr] gap-8 items-stretch">
+        <div class="bg-white rounded-[2rem] border border-slate-200 p-8 md:p-12 lg:p-14 hairline">
+          <div class="max-w-4xl">
+            <div class="mono text-xs uppercase tracking-[0.3em] text-slate-500 mb-6">Backend Systems Engineer</div>
 
-      // Load theme
-      if (localStorage.theme === 'light') {
-        document.documentElement.classList.remove('dark');
-      } else if (!localStorage.theme) {
-        if (window.matchMedia('(prefers-color-scheme: light)').matches) {
-          document.documentElement.classList.remove('dark');
-        }
-      }
+            <h1 class="text-5xl md:text-7xl lg:text-[5.6rem] font-extrabold leading-[0.93] tracking-tight max-w-4xl text-slate-950">
+              Software for
+              <span class="text-slate-600">business operations</span>,
+              not just interfaces.
+            </h1>
 
-      toggle.addEventListener('click', () => {
-        document.documentElement.classList.toggle('dark');
+            <p class="mt-7 text-lg md:text-xl text-slate-600 leading-relaxed max-w-2xl">
+              Backend engineer working on APIs, workflow systems, data pipelines and operational software across logistics, supply chain and business applications.
+            </p>
 
-        localStorage.theme = document.documentElement.classList.contains('dark')
-          ? 'dark'
-          : 'light';
-      });
-    });
-  </script>
--->
-  </body>
+            <div class="mt-10 flex flex-wrap gap-3">
+              <span class="px-4 py-2 rounded-full bg-slate-100 border border-slate-200 text-slate-700"><i class="fa-solid fa-gears mr-2 text-slate-500"></i>Workflow Systems</span>
+              <span class="px-4 py-2 rounded-full bg-slate-100 border border-slate-200 text-slate-700"><i class="fa-solid fa-boxes-stacked mr-2 text-slate-500"></i>Supply Chain</span>
+              <span class="px-4 py-2 rounded-full bg-slate-100 border border-slate-200 text-slate-700"><i class="fa-solid fa-file-invoice-dollar mr-2 text-slate-500"></i>Procurement</span>
+              <span class="px-4 py-2 rounded-full bg-slate-100 border border-slate-200 text-slate-700"><i class="fa-solid fa-database mr-2 text-slate-500"></i>Backend Data</span>
+            </div>
+
+            <div class="mt-12 flex flex-wrap gap-4">
+              <a href="/resume.pdf" download class="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-slate-900 text-white font-semibold hover:bg-slate-800 transition-colors">
+                <i class="fa-solid fa-file-arrow-down"></i>
+                Download Resume
+              </a>
+              <a href="#platforms" class="inline-flex items-center gap-2 px-6 py-3 rounded-xl border border-slate-300 text-slate-800 hover:border-slate-400 hover:bg-slate-100 transition-colors">
+                <i class="fa-solid fa-arrow-down"></i>
+                View Platforms
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <aside class="grid gap-4">
+          <div class="bg-white rounded-[2rem] border border-slate-200 p-6 hairline">
+            <div class="flex items-center justify-between mb-5">
+              <div class="mono text-xs uppercase tracking-[0.28em] text-slate-500">Current role</div>
+              <i class="fa-solid fa-briefcase text-slate-500"></i>
+            </div>
+            <div class="text-2xl font-bold text-slate-950 mb-2">Navallance Spares & Services</div>
+            <div class="text-slate-600 leading-relaxed">Backend systems for marine procurement and supply-chain operations.</div>
+          </div>
+
+          <div class="bg-white rounded-[2rem] border border-slate-200 p-6 hairline">
+            <div class="mono text-xs uppercase tracking-[0.28em] text-slate-500 mb-5">Selected scope</div>
+            <div class="space-y-4">
+              <div class="flex items-center justify-between gap-4"><span class="text-slate-800"><i class="fa-solid fa-circle-nodes mr-2 text-slate-500"></i>RFQ Automation</span><span class="text-slate-500 text-sm">Navallance</span></div>
+              <div class="flex items-center justify-between gap-4"><span class="text-slate-800"><i class="fa-solid fa-ship mr-2 text-slate-500"></i>Shipment Tracking</span><span class="text-slate-500 text-sm">Navallance</span></div>
+              <div class="flex items-center justify-between gap-4"><span class="text-slate-800"><i class="fa-solid fa-chart-line mr-2 text-slate-500"></i>Operational Reporting</span><span class="text-slate-500 text-sm">Infi</span></div>
+              <div class="flex items-center justify-between gap-4"><span class="text-slate-800"><i class="fa-solid fa-code mr-2 text-slate-500"></i>API Design</span><span class="text-slate-500 text-sm">Infi</span></div>
+            </div>
+          </div>
+
+          <div class="bg-white rounded-[2rem] border border-slate-200 p-6 hairline">
+            <div class="mono text-xs uppercase tracking-[0.28em] text-slate-500 mb-4">At a glance</div>
+            <div class="grid grid-cols-2 gap-4">
+              <div>
+                <div class="text-3xl font-bold text-slate-950">3</div>
+                <div class="text-slate-500 text-sm mt-1">Professional roles in the resume</div>
+              </div>
+              <div>
+                <div class="text-3xl font-bold text-slate-950">2</div>
+                <div class="text-slate-500 text-sm mt-1">Core work zones: logistics and supply chain</div>
+              </div>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- Platforms -->
+    <section id="platforms" class="max-w-7xl mx-auto px-6 py-16 md:py-20 section-rule">
+      <div class="flex items-end justify-between gap-6 mb-10">
+        <div>
+          <p class="mono text-xs uppercase tracking-[0.28em] text-slate-500 mb-4">Platforms</p>
+          <h2 class="text-3xl md:text-5xl font-bold text-slate-950">Platform Experience</h2>
+        </div>
+        <p class="hidden md:block text-slate-500 max-w-xl text-right leading-relaxed">
+          The page is organized around systems and operational environments rather than a project list.
+        </p>
+      </div>
+
+      <div class="space-y-5">
+        <article class="bg-white rounded-[2rem] border border-slate-200 p-7 md:p-9 hairline">
+          <div class="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-4 mb-6">
+            <div>
+              <div class="mono text-xs uppercase tracking-[0.24em] text-slate-500 mb-3">01</div>
+              <h3 class="text-2xl md:text-3xl font-bold flex items-center gap-3 text-slate-950"><i class="fa-solid fa-ship text-slate-500"></i>Procurement & Supply Chain Systems</h3>
+              <p class="text-slate-600 mt-3 max-w-3xl">Backend services supporting RFQ processing, inventory management, shipment tracking and customer workflows.</p>
+            </div>
+            <span class="shrink-0 inline-flex items-center gap-2 px-3 py-1 rounded-full border border-slate-300 bg-slate-50 text-slate-700 text-sm">
+              <i class="fa-solid fa-bolt"></i>
+              Current Focus
+            </span>
+          </div>
+          <div class="grid sm:grid-cols-2 xl:grid-cols-4 gap-3">
+            <div class="rounded-2xl bg-slate-50 border border-slate-200 px-4 py-4 text-slate-700"><i class="fa-solid fa-circle-nodes mr-2 text-slate-500"></i>RFQ Processing</div>
+            <div class="rounded-2xl bg-slate-50 border border-slate-200 px-4 py-4 text-slate-700"><i class="fa-solid fa-box mr-2 text-slate-500"></i>Inventory Management</div>
+            <div class="rounded-2xl bg-slate-50 border border-slate-200 px-4 py-4 text-slate-700"><i class="fa-solid fa-location-dot mr-2 text-slate-500"></i>Shipment Tracking</div>
+            <div class="rounded-2xl bg-slate-50 border border-slate-200 px-4 py-4 text-slate-700"><i class="fa-solid fa-user-gear mr-2 text-slate-500"></i>Customer Workflows</div>
+          </div>
+        </article>
+
+        <article class="bg-white rounded-[2rem] border border-slate-200 p-7 md:p-9 hairline">
+          <div class="mono text-xs uppercase tracking-[0.24em] text-slate-500 mb-3">02</div>
+          <h3 class="text-2xl md:text-3xl font-bold flex items-center gap-3 mb-4 text-slate-950"><i class="fa-solid fa-chart-line text-slate-500"></i>Logistics Intelligence Platform</h3>
+          <p class="text-slate-600 max-w-3xl mb-6">APIs, backend workflows and data pipelines supporting logistics operations.</p>
+          <div class="grid sm:grid-cols-2 xl:grid-cols-4 gap-3">
+            <div class="rounded-2xl bg-slate-50 border border-slate-200 px-4 py-4 text-slate-700"><i class="fa-solid fa-code mr-2 text-slate-500"></i>API Design</div>
+            <div class="rounded-2xl bg-slate-50 border border-slate-200 px-4 py-4 text-slate-700"><i class="fa-solid fa-gears mr-2 text-slate-500"></i>Workflow Systems</div>
+            <div class="rounded-2xl bg-slate-50 border border-slate-200 px-4 py-4 text-slate-700"><i class="fa-solid fa-database mr-2 text-slate-500"></i>Data Pipelines</div>
+            <div class="rounded-2xl bg-slate-50 border border-slate-200 px-4 py-4 text-slate-700"><i class="fa-solid fa-chart-simple mr-2 text-slate-500"></i>Operational Reporting</div>
+          </div>
+        </article>
+
+        <article class="bg-white rounded-[2rem] border border-slate-200 p-7 md:p-9 hairline">
+          <div class="mono text-xs uppercase tracking-[0.24em] text-slate-500 mb-3">03</div>
+          <h3 class="text-2xl md:text-3xl font-bold flex items-center gap-3 mb-4 text-slate-950"><i class="fa-solid fa-laptop-code text-slate-500"></i>Client Delivery Systems</h3>
+          <p class="text-slate-600 max-w-3xl mb-6">Deployment, implementation and support work across business and web applications.</p>
+          <div class="grid sm:grid-cols-2 xl:grid-cols-4 gap-3">
+            <div class="rounded-2xl bg-slate-50 border border-slate-200 px-4 py-4 text-slate-700"><i class="fa-solid fa-cloud-arrow-up mr-2 text-slate-500"></i>Deployments</div>
+            <div class="rounded-2xl bg-slate-50 border border-slate-200 px-4 py-4 text-slate-700"><i class="fa-solid fa-screwdriver-wrench mr-2 text-slate-500"></i>Implementation</div>
+            <div class="rounded-2xl bg-slate-50 border border-slate-200 px-4 py-4 text-slate-700"><i class="fa-solid fa-window-maximize mr-2 text-slate-500"></i>Business Applications</div>
+            <div class="rounded-2xl bg-slate-50 border border-slate-200 px-4 py-4 text-slate-700"><i class="fa-solid fa-headset mr-2 text-slate-500"></i>Support</div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Systems -->
+    <section id="systems" class="max-w-7xl mx-auto px-6 py-16 md:py-20 section-rule">
+      <div class="mb-10">
+        <p class="mono text-xs uppercase tracking-[0.28em] text-slate-500 mb-4">Systems</p>
+        <h2 class="text-3xl md:text-5xl font-bold text-slate-950">What I work around</h2>
+      </div>
+
+      <div class="grid md:grid-cols-2 xl:grid-cols-3 gap-4">
+        <div class="rounded-[1.6rem] border border-slate-200 bg-white p-6 hairline">
+          <div class="flex items-center gap-3 mb-3 text-slate-700"><i class="fa-solid fa-file-invoice-dollar text-slate-500"></i><span class="font-semibold">Procurement Workflows</span></div>
+          <p class="text-sm text-slate-500">RFQ processing, purchasing operations and coordination.</p>
+        </div>
+        <div class="rounded-[1.6rem] border border-slate-200 bg-white p-6 hairline">
+          <div class="flex items-center gap-3 mb-3 text-slate-700"><i class="fa-solid fa-boxes-stacked text-slate-500"></i><span class="font-semibold">Inventory Operations</span></div>
+          <p class="text-sm text-slate-500">Inventory visibility, stock management and tracking.</p>
+        </div>
+        <div class="rounded-[1.6rem] border border-slate-200 bg-white p-6 hairline">
+          <div class="flex items-center gap-3 mb-3 text-slate-700"><i class="fa-solid fa-ship text-slate-500"></i><span class="font-semibold">Shipment Tracking</span></div>
+          <p class="text-sm text-slate-500">Movement tracking and logistics support workflows.</p>
+        </div>
+        <div class="rounded-[1.6rem] border border-slate-200 bg-white p-6 hairline">
+          <div class="flex items-center gap-3 mb-3 text-slate-700"><i class="fa-solid fa-gears text-slate-500"></i><span class="font-semibold">Workflow Automation</span></div>
+          <p class="text-sm text-slate-500">Business process automation and operational efficiency.</p>
+        </div>
+        <div class="rounded-[1.6rem] border border-slate-200 bg-white p-6 hairline">
+          <div class="flex items-center gap-3 mb-3 text-slate-700"><i class="fa-solid fa-server text-slate-500"></i><span class="font-semibold">Backend APIs</span></div>
+          <p class="text-sm text-slate-500">Service design, backend logic and integrations.</p>
+        </div>
+        <div class="rounded-[1.6rem] border border-slate-200 bg-white p-6 hairline">
+          <div class="flex items-center gap-3 mb-3 text-slate-700"><i class="fa-solid fa-chart-line text-slate-500"></i><span class="font-semibold">Operational Reporting</span></div>
+          <p class="text-sm text-slate-500">Reporting flows and business visibility.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Approach -->
+    <section id="approach" class="max-w-7xl mx-auto px-6 py-16 md:py-20 section-rule">
+      <div class="mb-10">
+        <p class="mono text-xs uppercase tracking-[0.28em] text-slate-500 mb-4">Approach</p>
+        <h2 class="text-3xl md:text-5xl font-bold text-slate-950">How I think about systems</h2>
+      </div>
+
+      <div class="grid md:grid-cols-4 gap-4">
+        <div class="rounded-[1.5rem] border border-slate-200 bg-white p-6 hairline">
+          <div class="flex items-center gap-3 mb-3 text-slate-700"><i class="fa-solid fa-code text-slate-500"></i><span class="font-semibold">Applications</span></div>
+          <p class="text-sm text-slate-500">Interfaces and user-facing workflows.</p>
+        </div>
+        <div class="rounded-[1.5rem] border border-slate-200 bg-white p-6 hairline">
+          <div class="flex items-center gap-3 mb-3 text-slate-700"><i class="fa-solid fa-server text-slate-500"></i><span class="font-semibold">API Layer</span></div>
+          <p class="text-sm text-slate-500">Backend services and integration points.</p>
+        </div>
+        <div class="rounded-[1.5rem] border border-slate-200 bg-white p-6 hairline">
+          <div class="flex items-center gap-3 mb-3 text-slate-700"><i class="fa-solid fa-database text-slate-500"></i><span class="font-semibold">Data Layer</span></div>
+          <p class="text-sm text-slate-500">Databases, modeling and operational data.</p>
+        </div>
+        <div class="rounded-[1.5rem] border border-slate-200 bg-white p-6 hairline">
+          <div class="flex items-center gap-3 mb-3 text-slate-700"><i class="fa-brands fa-aws text-slate-500"></i><span class="font-semibold">Infrastructure</span></div>
+          <p class="text-sm text-slate-500">Cloud deployment and supporting services.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Technology -->
+    <section id="technology" class="py-16 md:py-20 bg-white border-y border-slate-200">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="mb-10">
+          <p class="mono text-xs uppercase tracking-[0.28em] text-slate-500 mb-4">Technology</p>
+          <h2 class="text-3xl md:text-5xl font-bold text-slate-950">Tools & platforms</h2>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-4">
+          <div class="rounded-[1.75rem] border border-slate-200 bg-slate-50 p-8 hairline">
+            <div class="flex items-center gap-3 mb-5 text-slate-700"><i class="fa-solid fa-server text-slate-500"></i><span class="font-semibold text-lg">Backend</span></div>
+            <div class="space-y-2 text-slate-700"><div>Node.js</div><div>NestJS</div></div>
+          </div>
+          <div class="rounded-[1.75rem] border border-slate-200 bg-slate-50 p-8 hairline">
+            <div class="flex items-center gap-3 mb-5 text-slate-700"><i class="fa-solid fa-database text-slate-500"></i><span class="font-semibold text-lg">Data</span></div>
+            <div class="space-y-2 text-slate-700"><div>PostgreSQL</div><div>MySQL</div></div>
+          </div>
+          <div class="rounded-[1.75rem] border border-slate-200 bg-slate-50 p-8 hairline">
+            <div class="flex items-center gap-3 mb-5 text-slate-700"><i class="fa-brands fa-aws text-slate-500"></i><span class="font-semibold text-lg">Infrastructure</span></div>
+            <div class="space-y-2 text-slate-700"><div>AWS</div><div>Git</div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Timeline -->
+    <section id="experience" class="max-w-7xl mx-auto px-6 py-16 md:py-20 section-rule">
+      <div class="mb-10">
+        <p class="mono text-xs uppercase tracking-[0.28em] text-slate-500 mb-4">Experience</p>
+        <h2 class="text-3xl md:text-5xl font-bold text-slate-950">Timeline</h2>
+      </div>
+
+      <div class="grid lg:grid-cols-3 gap-4">
+        <div class="rounded-[1.75rem] border border-slate-200 bg-white p-7 hairline">
+          <div class="flex items-center justify-between mb-4">
+            <span class="mono text-xs uppercase tracking-[0.24em] text-slate-500">2025 — Present</span>
+            <i class="fa-solid fa-circle text-slate-400 text-xs"></i>
+          </div>
+          <h3 class="text-xl font-semibold mb-2 text-slate-950">Navallance Spares & Services</h3>
+          <p class="text-slate-600">Backend systems for marine procurement and supply-chain operations.</p>
+        </div>
+        <div class="rounded-[1.75rem] border border-slate-200 bg-white p-7 hairline">
+          <div class="flex items-center justify-between mb-4">
+            <span class="mono text-xs uppercase tracking-[0.24em] text-slate-500">2020 — 2024</span>
+            <i class="fa-solid fa-circle text-slate-400 text-xs"></i>
+          </div>
+          <h3 class="text-xl font-semibold mb-2 text-slate-950">Infi Services</h3>
+          <p class="text-slate-600">APIs, backend workflows and data pipelines for logistics intelligence.</p>
+        </div>
+        <div class="rounded-[1.75rem] border border-slate-200 bg-white p-7 hairline">
+          <div class="flex items-center justify-between mb-4">
+            <span class="mono text-xs uppercase tracking-[0.24em] text-slate-500">2019 — 2020</span>
+            <i class="fa-solid fa-circle text-slate-400 text-xs"></i>
+          </div>
+          <h3 class="text-xl font-semibold mb-2 text-slate-950">Independent Consultant</h3>
+          <p class="text-slate-600">Client delivery, implementation and support across small business applications.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Education + contact -->
+    <section class="max-w-7xl mx-auto px-6 pb-20">
+      <div class="grid lg:grid-cols-2 gap-4">
+        <div class="rounded-[1.75rem] border border-slate-200 bg-white p-8 hairline">
+          <p class="mono text-xs uppercase tracking-[0.28em] text-slate-500 mb-4">Education</p>
+          <div class="space-y-5">
+            <div>
+              <div class="font-semibold text-slate-950">Master of Computer Applications</div>
+              <div class="text-slate-500 text-sm mt-1">Amity University • 2026</div>
+              <div class="text-slate-500 text-sm mt-1">Major project: Supply Chain Optimization Platform on AWS.</div>
+            </div>
+            <div>
+              <div class="font-semibold text-slate-950">B.Sc. Computer Science</div>
+              <div class="text-slate-500 text-sm mt-1">Sabarmati University • 2019</div>
+              <div class="text-slate-500 text-sm mt-1">Major project: Core banking application.</div>
+            </div>
+          </div>
+        </div>
+
+        <div id="contact" class="rounded-[1.75rem] border border-slate-200 bg-slate-950 p-8 text-white hairline">
+          <p class="mono text-xs uppercase tracking-[0.28em] text-slate-400 mb-4">Contact</p>
+          <h3 class="text-2xl font-bold mb-3">Let's connect</h3>
+          <p class="text-slate-300 mb-6">Backend engineering, workflow automation and operational software.</p>
+          <div class="flex flex-wrap gap-3">
+            <a href="/resume.pdf" download class="inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-white text-slate-950 font-semibold hover:bg-slate-100 transition-colors"><i class="fa-solid fa-file-arrow-down"></i>Resume</a>
+            <a href="mailto:anand.potukuchi@gmail.com" class="inline-flex items-center gap-2 px-5 py-3 rounded-xl border border-white/15 hover:bg-white/5 transition-colors"><i class="fa-solid fa-envelope"></i>Email</a>
+            <a href="https://github.com/" class="inline-flex items-center gap-2 px-5 py-3 rounded-xl border border-white/15 hover:bg-white/5 transition-colors"><i class="fa-brands fa-github"></i>GitHub</a>
+            <a href="https://www.linkedin.com/" class="inline-flex items-center gap-2 px-5 py-3 rounded-xl border border-white/15 hover:bg-white/5 transition-colors"><i class="fa-brands fa-linkedin"></i>LinkedIn</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
 </html>
